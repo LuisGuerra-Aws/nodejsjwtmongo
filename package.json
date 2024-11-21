@@ -1,0 +1,44 @@
+{
+  "name": "nodejsmongojwt",
+  "version": "1.0.0",
+  "description": "ejemplo de jwt con nodejs y mongo",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node -r ts-node/register --watch --env-file=.env ./src/index.ts",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prepare": "husky"
+  },
+  "author": "lagh",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.9.1",
+    "@typescript-eslint/eslint-plugin": "8.8.0",
+    "@typescript-eslint/parser": "8.8.0",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-sort-destructure-keys": "2.0.0",
+    "husky": "9.1.6",
+    "lint-staged": "15.2.10",
+    "prettier": "3.3.3",
+    "ts-node": "10.9.2",
+    "typescript": "5.6.2"
+  },
+  "lint-staged": {
+    "**/*.ts?(x)": [
+      "eslint src --fix",
+      "prettier --write"
+    ]
+  }
+}
